@@ -1,4 +1,5 @@
-# ChatworkAPI
+# ChatworkAPI 
+
 ## The chatwork messaging API
 Here, I have collected all of the api from chatwork. You can easily use the API on your own.
 
@@ -14,6 +15,10 @@ The OAuth flows (authorization grant) is also supported. For more information se
 
 ## For Realtime notification
 you might see the webhooks provided by chatwork. For more information -> https://developer.chatwork.com/docs/webhook
+
+## How to use
+Import the json file under the Postman Collections folder to your postman.
+
 
 Hope this help you will.
 Thank you.
