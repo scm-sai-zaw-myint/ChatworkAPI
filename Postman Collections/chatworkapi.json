@@ -1,0 +1,976 @@
+{
+	"info": {
+		"_postman_id": "5c6a3af2-4a1d-4aac-887b-b55383a75552",
+		"name": "Chatwork API",
+		"description": "The chatwork messaging API\n\nHere, I have collected all of the api from chatwork. You can easily use the API on your own.\n\nFirst of all,\n\nBefore start using the API, you need to know chatwork API authorization flow.\n\n**Basic Auth Flow**\n\nYou can easily use the api token get from here -> [https://www.chatwork.com/service/packages/chatwork/subpackages/api/token.php](https://www.chatwork.com/service/packages/chatwork/subpackages/api/token.php)\n\nand authorized the request by provided as a **x-chatworktoken** header on all request.\n\n**OAuth Flow**\n\nThe OAuth flows (authorization grant) is also supported. For more information see here -> [https://developer.chatwork.com/docs/oauth](https://developer.chatwork.com/docs/oauth)\n\nFor Realtime notification, you might see the webhooks provided by chatwork. For more information ->\n\n[https://developer.chatwork.com/docs/webhook](https://developer.chatwork.com/docs/webhook)\n\nHope this help you will.\n\nThank you.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Me",
+			"item": [
+				{
+					"name": "Me",
+					"_postman_id": "6feed6ac-cf6e-410f-a895-5ff198c0c0ed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-chatworktoken",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}/{{version}}/me"
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Status",
+					"_postman_id": "73af9adc-dc5d-4655-90f5-b45101889d38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Task List",
+					"_postman_id": "70f4a0ff-9486-48fe-a625-3d09f4488329",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-chatworktoken",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}/{{version}}/my/tasks"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "6e73d9bc-c765-42ce-ad8b-f377af73c320",
+			"description": "Getting the authorized user information."
+		},
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "Contact Lists",
+					"_postman_id": "be376ba8-8b8b-491c-9865-f9eea0864025",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-chatworktoken",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}/{{version}}/contacts"
+					},
+					"response": []
+				},
+				{
+					"name": "Approval Requests",
+					"_postman_id": "079b3623-b56d-41e6-98a3-a63f4515c9ca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-chatworktoken",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}/{{version}}/incoming_requests"
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Request",
+					"_postman_id": "92b43f3c-b77b-4e12-9c77-7da15403f658",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-chatworktoken",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}/{{version}}/incoming_requests/32125936"
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Request",
+					"_postman_id": "53d95f71-8a3b-49df-bfa7-be05219954cf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-chatworktoken",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}/{{version}}/incoming_requests/32125936"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "8b096cab-64fe-4f7d-9729-37f4365fea12"
+		},
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "Members",
+					"item": [
+						{
+							"name": "Get members",
+							"_postman_id": "0af40115-7dd9-4322-9ffd-63870d022b05",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}/{{version}}/rooms/329540806/members"
+							},
+							"response": []
+						},
+						{
+							"name": "Change Chat Member",
+							"_postman_id": "8811c566-7f32-4839-a2b4-8af970d6516a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "members_admin_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "members_member_ids",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "members_readonly_ids",
+											"value": "",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms/329540806/members",
+								"description": "Change chat member information\n\n1. member_admin_ids - add more admin or drop some admin\n2. member_member_ids - add members or delete some member\n3. members_readonly_ids - add read-only member"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "f976c82b-98c8-48b3-9b41-586f38bf6835",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Details",
+					"item": [
+						{
+							"name": "Get Room List",
+							"_postman_id": "284e8037-aa9c-4672-a5c9-54810054923d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}/{{version}}/rooms"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Chat Room",
+							"_postman_id": "e635da41-d82a-4cd4-8d2d-706151451b7b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "My Test Chat Room",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Testing",
+											"type": "text"
+										},
+										{
+											"key": "members_admin_ids",
+											"value": "6959734",
+											"type": "text"
+										},
+										{
+											"key": "members_member_ids",
+											"value": "6942034",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "link_code",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms"
+							},
+							"response": []
+						},
+						{
+							"name": "Room Details",
+							"_postman_id": "ecad97aa-0d68-437d-946c-caeb15131b4f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}/{{version}}/rooms/329540806"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Room",
+							"_postman_id": "a212f945-c5b4-4d2b-837b-dd6f764154cf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Update Roome Name",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms/329540806"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Room Or Leave",
+							"_postman_id": "0e441941-106c-4c4b-bbe6-b541cb17a99f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "action_type",
+											"value": "delete",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/room/329540806",
+								"description": "There are 2 action types\n\n1. leave - Leave the chat room\n2. delete - Admin delete the chat room"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "c3872918-8193-47bb-8d36-887261b9f1fc",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Message",
+					"item": [
+						{
+							"name": "Details",
+							"item": [
+								{
+									"name": "Get Message",
+									"_postman_id": "f0cb3bd0-68b3-4b99-b004-50b4f041c9e7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-chatworktoken",
+												"value": "{{api-token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{host}}/{{version}}/rooms/329540806/messages/1730904191875960832"
+									},
+									"response": []
+								},
+								{
+									"name": "Edit Message",
+									"_postman_id": "3e125079-4855-4a5b-82d2-6c07415f0dd7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "x-chatworktoken",
+												"value": "{{api-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "body",
+													"value": "Update the message",
+													"type": "text"
+												}
+											],
+											"options": {
+												"urlencoded": {}
+											}
+										},
+										"url": "{{host}}/{{version}}/rooms/329540806/messages/1730904191875960832"
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Message",
+									"_postman_id": "9e8677a2-68be-4abd-81b8-7b900a8edca5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-chatworktoken",
+												"value": "{{api-token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{host}}/{{version}}/rooms/329540806/messages/1730904191875960832"
+									},
+									"response": []
+								}
+							],
+							"_postman_id": "f554c6c1-13fa-4d5b-ac59-12e29ba2b391",
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get message list",
+							"_postman_id": "11ce86ba-e276-489a-a4a1-42052e43ef81",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}/{{version}}/rooms/329540806/messages"
+							},
+							"response": []
+						},
+						{
+							"name": "Send Message",
+							"_postman_id": "c40625bd-81a9-4a2d-a75b-760f14134d29",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "body",
+											"value": "Hello, test api message!",
+											"type": "text"
+										},
+										{
+											"key": "self_unread",
+											"value": "0",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms/329540806/messages",
+								"description": "Send messages to room chat.\n\nParameters\n\n1. body - the message body\n2. self_unread - send messages as read/unread. 0 unread (default), 1 read."
+							},
+							"response": []
+						},
+						{
+							"name": "Mark Unread Chat Message",
+							"_postman_id": "b7e0cb67-fd6b-4e6e-a87a-13786398fc8a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "message_id",
+											"value": "1730904191875960832",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms/329540806/messages/unread"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "120b1206-b4b6-414e-a709-201bd3e14579",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Tasks",
+					"item": [
+						{
+							"name": "Details",
+							"item": [
+								{
+									"name": "Get Task Info",
+									"_postman_id": "365d1a08-c383-44fc-a49d-415a74190468",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-chatworktoken",
+												"value": "{{api-token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{host}}/{{version}}/rooms/329540806/tasks/322548551"
+									},
+									"response": []
+								},
+								{
+									"name": "Task Status",
+									"_postman_id": "fd5c7414-850e-4fe0-853f-a21fdf9f0ae6",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "x-chatworktoken",
+												"value": "{{api-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "body",
+													"value": "done",
+													"type": "text"
+												}
+											],
+											"options": {
+												"urlencoded": {}
+											}
+										},
+										"url": "{{host}}/{{version}}/rooms/329540806/tasks/322548551/status",
+										"description": "Edit task status.\n\nParameters\n\n1. body - Completion state of the task.  \n    `done`is specified, the task is completed.  \n    `open`If is specified, the task will be incomplete."
+									},
+									"response": []
+								}
+							],
+							"_postman_id": "469da1ab-4db5-4198-a89e-40c50fb0ba67",
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get Tasks",
+							"_postman_id": "8fae3e5e-96cf-4d16-b4e4-df7a544d0bcb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}/{{version}}/rooms/329540806/tasks"
+							},
+							"response": []
+						},
+						{
+							"name": "Add Tasks",
+							"_postman_id": "7c8a8fc7-44ea-4804-83d3-2b5bb0213fe9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "body",
+											"value": "Create Task",
+											"type": "text"
+										},
+										{
+											"key": "to_ids",
+											"value": "6942034",
+											"type": "text"
+										},
+										{
+											"key": "limit",
+											"value": "1385996399",
+											"type": "text"
+										},
+										{
+											"key": "limit_type",
+											"value": "time",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms/329540806/tasks",
+								"description": "Add task to the chat.\n\nParameters\n\n1. body - the message body\n2. StartFragmentto_ids - a list of users you want to be assignees.  \n    Please specify the account IDs of users belonging to the chat, separated by commas.\n3. limit - task deadline.\n4. limit_type - The type of due date for the task.  \n    `none`will create a task with no due date.  \n    `date`If is specified, create a task with a due date.  \n    `time`If is specified, creates a time-due task."
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "780252f9-dcd6-4000-9fe6-0bf0d0bdd66f",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Files",
+					"item": [
+						{
+							"name": "Details",
+							"item": [
+								{
+									"name": "Get file info",
+									"_postman_id": "84117587-a356-4034-bef0-729a2ce58876",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-chatworktoken",
+												"value": "{{api-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/{{version}}/rooms/329540806/files/1247057164?create_download_url=0",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"{{version}}",
+												"rooms",
+												"329540806",
+												"files",
+												"1247057164"
+											],
+											"query": [
+												{
+													"key": "create_download_url",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"description": "Get chat file information.\n\nParameters\n\n1. create_download_rul - 0 (default), 1 (create)"
+									},
+									"response": []
+								}
+							],
+							"_postman_id": "e8ec8fd9-e662-4803-be3a-fd6f9f6ad6d1",
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get File list",
+							"_postman_id": "115ae2ce-ee34-4ee8-a817-feec97ae710c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}/{{version}}/rooms/329540806/files"
+							},
+							"response": []
+						},
+						{
+							"name": "Upload file",
+							"_postman_id": "2c3dbc92-ed2e-438d-98c7-5d8695587b88",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/SaiZawMyint/Downloads/header_banner-6.jpg"
+										},
+										{
+											"key": "message",
+											"value": "Test file upload",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms/329540806/files"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "b6c53382-e295-4526-8721-2da071bb7f41",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Share",
+					"item": [
+						{
+							"name": "Get Invite Link",
+							"_postman_id": "1d6c169b-4422-4418-9976-e4163e38f557",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}/{{version}}/rooms/329540806/link",
+								"description": "_The chat room must be enabled the invitation link._"
+							},
+							"response": []
+						},
+						{
+							"name": "Create invite link",
+							"_postman_id": "4a8235a1-5a71-4bbd-a75a-fd92e839663a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "code",
+											"value": "AaBbCcEe12",
+											"type": "text"
+										},
+										{
+											"key": "need_acceptance",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "The custom invite link",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms/329540806/link",
+								"description": "Create a custom invitation link.\n\nParameters\n\n1. code - the code to use in the invite link\n2. need_acceptance - the acceptance from admin use to accept the request. 1 (default), 0 no-need.\n3. description - the description of the link."
+							},
+							"response": []
+						},
+						{
+							"name": "Edit invite link",
+							"_postman_id": "c3f2a1b0-cff1-45e1-87bb-62cebc65fe07",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "code",
+											"value": "TestTTTe",
+											"type": "text"
+										},
+										{
+											"key": "need_acceptance",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "the non acceptance",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "{{host}}/{{version}}/rooms/329540806/link"
+							},
+							"response": []
+						},
+						{
+							"name": "Remove invite link",
+							"_postman_id": "8fbe3d87-4a2f-4e1d-a17a-24710954583b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-chatworktoken",
+										"value": "{{api-token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}/{{version}}/rooms/329540806/link"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "2481b98d-8c09-4c6a-8c47-a56053097ccd",
+					"_postman_isSubFolder": true
+				}
+			],
+			"_postman_id": "7c230541-e85d-47c2-bc8c-5e02ffb73f70"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "71100054-d845-4f01-8530-d006e06fc980",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c96c057b-4f96-4e37-9379-8276aedd9b39",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "9e600a8b-6e3d-4b67-8f9e-ac8ee4835fb5",
+			"key": "api-token",
+			"value": "your_api_token",
+			"type": "string"
+		},
+		{
+			"id": "171395cd-7602-48a3-9916-3fd57c464a73",
+			"key": "host",
+			"value": "https://api.chatwork.com",
+			"type": "string"
+		},
+		{
+			"id": "5bcd0c71-3d09-42c8-b4c2-452e03fe26f6",
+			"key": "version",
+			"value": "v2",
+			"type": "string"
+		}
+	]
+}
