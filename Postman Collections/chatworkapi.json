@@ -896,7 +896,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "71100054-d845-4f01-8530-d006e06fc980",
+				"id": "4dc74200-00ae-4b52-9bb3-c673f96df52e",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -906,7 +906,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c96c057b-4f96-4e37-9379-8276aedd9b39",
+				"id": "0fc4b090-6730-464b-b5a6-80cb97e64294",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -916,19 +916,19 @@
 	],
 	"variable": [
 		{
-			"id": "fdeaaddd-9140-4b65-ac96-3d8ad21e2fcd",
+			"id": "ce8a901d-849f-4371-b398-5d4e1507ff56",
 			"key": "api-token",
-			"value": "your_api_token",
+			"value": "eb09120fbdb8ead6867e6788b5a5e8cc",
 			"type": "string"
 		},
 		{
-			"id": "a328f5a3-e3dc-41cd-8f99-86071c05caab",
+			"id": "f17a1908-6ed9-4ba4-ab81-f8d9d73f4ef0",
 			"key": "host",
 			"value": "https://api.chatwork.com",
 			"type": "string"
 		},
 		{
-			"id": "d98d90c7-e03e-43d7-b32b-28668c0cd578",
+			"id": "c3c899b8-1af1-4641-9eaa-3868ad617d14",
 			"key": "version",
 			"value": "v2",
 			"type": "string"
