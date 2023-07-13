@@ -36,7 +36,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "x-chatworktoken",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}/{{version}}/my/status"
 					},
 					"response": []
 				},
@@ -909,19 +916,19 @@
 	],
 	"variable": [
 		{
-			"id": "9a9bb612-4940-4f2d-9d87-e8fcc0ab9070",
+			"id": "fdeaaddd-9140-4b65-ac96-3d8ad21e2fcd",
 			"key": "api-token",
 			"value": "your_api_token",
 			"type": "string"
 		},
 		{
-			"id": "d3cc5e98-90b0-4700-b2a5-2ac5540cc812",
+			"id": "a328f5a3-e3dc-41cd-8f99-86071c05caab",
 			"key": "host",
 			"value": "https://api.chatwork.com",
 			"type": "string"
 		},
 		{
-			"id": "4d88d6ec-605e-4017-ba93-2b518ef440ae",
+			"id": "d98d90c7-e03e-43d7-b32b-28668c0cd578",
 			"key": "version",
 			"value": "v2",
 			"type": "string"
