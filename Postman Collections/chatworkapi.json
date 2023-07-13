@@ -898,7 +898,7 @@
 					"name": "Requests",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "Request web hook",
 							"id": "2a98f244-b62c-4892-a3ae-9bc6ef16d317",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -940,25 +940,25 @@
 	],
 	"variable": [
 		{
-			"id": "a3d5f064-f3cb-4d8e-8d49-5e902a1e37ca",
+			"id": "3045d14c-2686-44c5-a6b0-f4d673e879ee",
 			"key": "api-token",
 			"value": "eb09120fbdb8ead6867e6788b5a5e8cc",
 			"type": "string"
 		},
 		{
-			"id": "6a282445-e80c-4333-9581-287f06fd1f98",
+			"id": "ab53e0d5-43a3-4b3e-82a9-54ef85d80670",
 			"key": "host",
 			"value": "https://api.chatwork.com",
 			"type": "string"
 		},
 		{
-			"id": "ed5ed21f-6724-4b3f-8825-6a5344e1f460",
+			"id": "475026cd-8d39-4e36-9093-ed5216bb20d7",
 			"key": "version",
 			"value": "v2",
 			"type": "string"
 		},
 		{
-			"id": "4d2809da-5e95-4ec1-9195-6b94f20be660",
+			"id": "775975f0-4372-4844-9d31-14a3e33fa732",
 			"key": "webhook-url",
 			"value": "https://mtmservice.com",
 			"type": "string"
