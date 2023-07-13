@@ -907,7 +907,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4dc74200-00ae-4b52-9bb3-c673f96df52e",
+				"id": "67cf6b79-da84-405e-a707-f9354f0ab699",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -917,7 +917,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "0fc4b090-6730-464b-b5a6-80cb97e64294",
+				"id": "0249dfa8-1734-4515-8ac8-da9f93bc4590",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -927,21 +927,27 @@
 	],
 	"variable": [
 		{
-			"id": "286f34e9-d776-448d-8740-065b35a5db8e",
+			"id": "5c7c908c-4e40-4340-a089-4b2980935795",
 			"key": "api-token",
 			"value": "eb09120fbdb8ead6867e6788b5a5e8cc",
 			"type": "string"
 		},
 		{
-			"id": "db0392e6-5d48-443b-b80e-34417c721366",
+			"id": "a37551c4-5614-4611-bf84-942c7329b9d5",
 			"key": "host",
 			"value": "https://api.chatwork.com",
 			"type": "string"
 		},
 		{
-			"id": "1b24ad24-79b3-4fa3-882e-09943cec64a4",
+			"id": "8a9767ae-d165-4eaf-9b83-580d1bc612dc",
 			"key": "version",
 			"value": "v2",
+			"type": "string"
+		},
+		{
+			"id": "2abc6fff-3a92-47f8-9d26-5856c1639a61",
+			"key": "webhook-url",
+			"value": "https://mtmservice.com",
 			"type": "string"
 		}
 	]
