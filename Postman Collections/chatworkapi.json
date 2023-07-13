@@ -890,6 +890,11 @@
 				}
 			],
 			"id": "7c230541-e85d-47c2-bc8c-5e02ffb73f70"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "32a65418-9840-463d-8f82-931e34de1a90"
 		}
 	],
 	"event": [
@@ -916,19 +921,19 @@
 	],
 	"variable": [
 		{
-			"id": "ce8a901d-849f-4371-b398-5d4e1507ff56",
+			"id": "6347351b-6e5c-482b-87f6-b34d96c1ea5a",
 			"key": "api-token",
 			"value": "eb09120fbdb8ead6867e6788b5a5e8cc",
 			"type": "string"
 		},
 		{
-			"id": "f17a1908-6ed9-4ba4-ab81-f8d9d73f4ef0",
+			"id": "9243b135-5028-4992-97b6-03491366120b",
 			"key": "host",
 			"value": "https://api.chatwork.com",
 			"type": "string"
 		},
 		{
-			"id": "c3c899b8-1af1-4641-9eaa-3868ad617d14",
+			"id": "692a3564-35e7-4351-88dd-0eb8d5351967",
 			"key": "version",
 			"value": "v2",
 			"type": "string"
