@@ -895,7 +895,7 @@
 			"name": "Webhook",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "Requests",
 					"item": [],
 					"id": "8f98e90c-3069-4371-a1c6-bf3158d5acff"
 				}
@@ -927,19 +927,19 @@
 	],
 	"variable": [
 		{
-			"id": "c527e3aa-1ad8-444a-b0b1-477c56585212",
+			"id": "286f34e9-d776-448d-8740-065b35a5db8e",
 			"key": "api-token",
 			"value": "eb09120fbdb8ead6867e6788b5a5e8cc",
 			"type": "string"
 		},
 		{
-			"id": "4819216a-4303-4317-af74-a5064af7a8b4",
+			"id": "db0392e6-5d48-443b-b80e-34417c721366",
 			"key": "host",
 			"value": "https://api.chatwork.com",
 			"type": "string"
 		},
 		{
-			"id": "14722022-196a-4ada-9eb9-2339f261a01b",
+			"id": "1b24ad24-79b3-4fa3-882e-09943cec64a4",
 			"key": "version",
 			"value": "v2",
 			"type": "string"
