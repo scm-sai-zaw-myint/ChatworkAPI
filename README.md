@@ -1,7 +1,7 @@
 # ChatworkAPI 
 
 ## The chatwork messaging API
-Here, I have collected all of the api from chatwork. You can easily use the API on your own.
+Hi, I have collected all of the api from chatwork. You can easily use the API on your own.
 <hr>
 
 ## Basic Auth Flow
