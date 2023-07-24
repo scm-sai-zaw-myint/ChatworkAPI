@@ -904,7 +904,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Content-Type",
@@ -922,6 +922,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"webhook_setting_id\": \"{{webhook-setting-id}}\",\r\n    \"webhook_event_type\": \"message_created\",\r\n    \"webhook_event_time\": 1691888977,\r\n    \"webhook_event\":{\r\n        \"message_id\": \"1731243171632906240\",\r\n        \"room_id\": 329540806,\r\n        \"body\": \"Hello, test api message!\",\r\n        \"send_time\": 1689234137,\r\n        \"update_time\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{webhook-url}}"
 							},
 							"response": []
@@ -957,37 +966,37 @@
 	],
 	"variable": [
 		{
-			"id": "9d364561-25fe-4e11-9926-2d57e7a5a2bc",
+			"id": "3534fb94-93ba-4492-8430-6f7777c1a112",
 			"key": "api-token",
 			"value": "eb09120fbdb8ead6867e6788b5a5e8cc",
 			"type": "string"
 		},
 		{
-			"id": "9c549afa-ffc3-4731-9cbe-e85bd40cd4c3",
+			"id": "562ceaee-ced4-4fe9-816f-8774a7172692",
 			"key": "host",
 			"value": "https://api.chatwork.com",
 			"type": "string"
 		},
 		{
-			"id": "ef831d09-09ba-460b-8491-edd0c5946cd5",
+			"id": "53e6b01f-60dc-49c5-982a-824a40dba68c",
 			"key": "version",
 			"value": "v2",
 			"type": "string"
 		},
 		{
-			"id": "c5364d01-efbd-4ae0-868a-47b710027306",
+			"id": "94aad5bb-b6e0-41ad-a5ee-b8c8d292074f",
 			"key": "webhook-url",
 			"value": "https://70e1-185-205-140-254.ngrok-free.app/api/webhook",
 			"type": "string"
 		},
 		{
-			"id": "9f9a21e1-8d33-4a70-a923-226b86a0c9eb",
+			"id": "dc536f38-f44b-409f-91cc-59e8838511a4",
 			"key": "webhook-token",
 			"value": "LBU8UkHuJzxLEbEIf3Mxs87SZ/SinZw59UEfKmEvLq8=",
 			"type": "string"
 		},
 		{
-			"id": "5c4fe2b8-ca92-473e-8f83-623a003492c7",
+			"id": "5be3972d-736f-45c5-9fef-364ca6e599a2",
 			"key": "webhook-setting-id",
 			"value": "19824",
 			"type": "string"
